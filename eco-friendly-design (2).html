@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yukinoの採用映像戦略</title>
+    <style>
+        :root {
+            --green-1: #1B512D;
+            --green-2: #7FB069;
+            --earth-1: #E6AA68;
+            --earth-2: #A67458;
+            --light: #F3F9E3;
+        }
+        
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--light);
+            color: var(--green-1);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 0;
+            position: relative;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--green-1);
+            position: relative;
+            display: inline-block;
+        }
+        
+        h1::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--green-2), transparent);
+            border-radius: 50%;
+        }
+        
+        h2 {
+            color: var(--earth-2);
+            font-size: 1.8rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        
+        h2::before {
+            content: "";
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        
+        .step1 h2::before {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%237FB069'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9v-2h2v2zm0-4H9V7h2v5z'/%3E%3C/svg%3E");
+        }
+        
+        .step2 h2::before {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%237FB069'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9v-2h2v2zm0-4H9V7h2v5z'/%3E%3C/svg%3E");
+        }
+        
+        .step3 h2::before {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%237FB069'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9v-2h2v2zm0-4H9V7h2v5z'/%3E%3C/svg%3E");
+        }
+        
+        .step4 h2::before {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%237FB069'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9v-2h2v2zm0-4H9V7h2v5z'/%3E%3C/svg%3E");
+        }
+        
+        .step5 h2::before {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%237FB069'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9v-2h2v2zm0-4H9V7h2v5z'/%3E%3C/svg%3E");
+        }
+        
+        .step6 h2::before {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%237FB069'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9v-2h2v2zm0-4H9V7h2v5z'/%3E%3C/svg%3E");
+        }
+        
+        .section {
+            background-color: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--green-1), var(--green-2));
+            border-radius: 5px;
+        }
+        
+        .section::after {
+            content: "";
+            position: absolute;
+            bottom: -30px;
+            right: -30px;
+            width: 100px;
+            height: 100px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23F3F9E3'%3E%3Cpath d='M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66 1.82-5.14c1.79 2.8 3.54 5.63 7.47 5.14 4.62-.58 6.76-3.8 6.89-7.18.13-3.28-1.87-7.45-4.89-6.82z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-size: contain;
+            opacity: 0.1;
+            transform: rotate(45deg);
+        }
+        
+        p {
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        strong {
+            color: var(--green-1);
+            font-weight: bold;
+        }
+        
+        .highlight {
+            background-color: rgba(127, 176, 105, 0.1);
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        
+        .divider {
+            height: 40px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 30' preserveAspectRatio='none'%3E%3Cpath d='M0,0 C300,30 600,0 900,20 L1200,5 L1200,30 L0,30 Z' fill='%237FB069' opacity='0.2'/%3E%3C/svg%3E");
+            background-size: 100% 100%;
+            margin: 40px 0;
+        }
+        
+        .method {
+            background-color: rgba(230, 170, 104, 0.1);
+            border-left: 4px solid var(--earth-1);
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .method-title {
+            font-weight: bold;
+            color: var(--earth-2);
+            margin-bottom: 10px;
+        }
+        
+        .summary {
+            background-color: var(--green-1);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 40px;
+        }
+        
+        .summary h2 {
+            color: white;
+            border-bottom: 2px solid var(--earth-1);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .summary-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        
+        .summary-table th, .summary-table td {
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 10px;
+            text-align: left;
+        }
+        
+        .summary-table th {
+            background-color: rgba(255,255,255,0.1);
+        }
+        
+        .emoji {
+            font-size: 1.5rem;
+            margin-right: 5px;
+            display: inline-block;
+        }
+        
+        .leaf-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80' width='80' height='80' opacity='0.03'%3E%3Cpath fill='%231B512D' d='M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66 1.82-5.14c1.79 2.8 3.54 5.63 7.47 5.14 4.62-.58 6.76-3.8 6.89-7.18.13-3.28-1.87-7.45-4.89-6.82z'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .summary p {
+            color: white;
+            margin-bottom: 15px;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="leaf-bg"></div>
+    <div class="container">
+        <header>
+            <h1>人材採用映像制作のためのChatGPT活用戦略</h1>
+            <p>自然な流れで企画から効果測定までをサポート</p>
+        </header>
+        
+        <div class="section step1">
+            <h2>STEP①：ヒアリングとリサーチの効率化</h2>
+            <p>採用映像を作るにあたり最も重要なのは、クライアント企業の特徴を明確に把握することです。しかしながら、企業側は自社の魅力を客観的に説明するのが苦手なことが多いです。</p>
+            
+            <div class="method">
+                <div class="method-title">【具体的な使い方】</div>
+                <p><strong>クライアントから聞き取った内容を箇条書きでまとめる</strong></p>
+                <ul>
+                    <li>企業理念・社風・特徴</li>
+                    <li>求める人物像</li>
+                    <li>採用で抱えている課題や悩み</li>
+                </ul>
+                <p>これらをChatGPTに入力して、<span class="highlight">「次の箇条書きを基に、この企業が求職者に訴求すべき最大の魅力ポイントを３つ抽出して、分かりやすく整理してください」</span>という形でAIに整理・分析させます。</p>
+            </div>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="section step2">
+            <h2>STEP②：求職者視点の切り口提案</h2>
+            <p>求職者が「つい見てしまう」ような映像には、『共感』や『自分事化』が必要です。そこで、求職者目線のストーリーをAIで広げます。</p>
+            
+            <div class="method">
+                <div class="method-title">【具体的な使い方】</div>
+                <p><strong>求職者像（ペルソナ）を設定して入力する</strong> 「20代後半女性・転職希望・前職では人間関係に悩んでいた・働く意味ややりがいを大切にしたい」</p>
+                <p><span class="highlight">「上記の求職者が、思わず共感して見てしまうようなショートドラマのシナリオを300文字程度で３パターン提案してください。」</span>という指示をChatGPTに出します。</p>
+                <p>特定の人物像にピンポイントで刺さる内容を複数提案させ、クライアントとの企画会議で採用しやすいストーリーを見つけます。</p>
+            </div>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="section step3">
+            <h2>STEP③：台本・ナレーション原稿作成</h2>
+            <p>企画が決まった後のシナリオやナレーション原稿作成もChatGPTが力を発揮します。</p>
+            
+            <div class="method">
+                <div class="method-title">【具体的な使い方】</div>
+                <p>採用した企画案を基に、場面設定と伝えたいメッセージを箇条書きで入力します。</p>
+                <p><span class="highlight">「以下の要素を満たした１分以内のショートドラマ形式で、冒頭から共感を呼ぶセリフ入りのシナリオを書いてください。セリフはリアルで自然な言葉遣いを意識して作成してください。」</span>という指示で作成します。</p>
+                <p>さらにナレーションも、<span class="highlight">「視聴者に安心感と共感を与える、柔らかく前向きなナレーション文を50文字程度で３パターン作成してください」</span>と、複数提案を受けて検討材料にします。</p>
+            </div>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="section step4">
+            <h2>STEP④：改善点フィードバック</h2>
+            <p>映像制作の初稿後、クライアントが「何か違う」と感じる場合があります。その漠然とした改善点を言語化するのもChatGPTの得意技です。</p>
+            
+            <div class="method">
+                <div class="method-title">【具体的な使い方】</div>
+                <p>映像のURLや映像内容をテキストで要約して入力します。</p>
+                <p><span class="highlight">「以下の映像内容を見て、ターゲットに訴求できていない可能性があるポイントを３つ挙げ、改善案を具体的に提示してください。」</span>という使い方で、次回の改善ミーティングで具体的な意見として提示できます。</p>
+            </div>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="section step5">
+            <h2>STEP⑤：SNS運用・拡散をサポート</h2>
+            <p>完成した映像をInstagramやTikTokにアップする際のタイトルやキャプションでもAIを活用します。</p>
+            
+            <div class="method">
+                <div class="method-title">【具体的な使い方】</div>
+                <p>完成した映像の内容を簡単にテキストで入力し、</p>
+                <p><span class="highlight">「TikTokで興味を惹くようなキャッチーなタイトルを３案考えてください。また、Instagramで投稿する際の視聴者がコメントしたくなるような質問形式のキャプションを考えてください。」</span>などの指示で拡散性を高めます。</p>
+            </div>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="section step6">
+            <h2>STEP⑥：効果測定・分析支援</h2>
+            <p>制作後の分析・レポート作成にもChatGPTを用います。</p>
+            
+            <div class="method">
+                <div class="method-title">【具体的な使い方】</div>
+                <p>映像公開後の視聴データや視聴者コメントをテキストで入力し、</p>
+                <p><span class="highlight">「下記の視聴データと視聴者コメントを基に、成功要因と改善すべきポイントを整理して、次回制作時の具体的な提案を箇条書きでまとめてください。」</span>と指示します。</p>
+                <p>AIに客観的な振り返りを支援させ、PDCAサイクルをスピーディに回します。</p>
+            </div>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="summary">
+            <h2><span class="emoji">🌟</span> Yukino流ChatGPT活用のまとめ</h2>
+            <table class="summary-table">
+                <tr>
+                    <th>活用シーン</th>
+                    <th>具体的なChatGPTの活用方法</th>
+                </tr>
+                <tr>
+                    <td>情報整理</td>
+                    <td>クライアントヒアリングの内容整理</td>
+                </tr>
+                <tr>
+                    <td>アイデア支援</td>
+                    <td>求職者目線で共感を生む企画提案</td>
+                </tr>
+                <tr>
+                    <td>ライティング支援</td>
+                    <td>シナリオ・ナレーション原稿作成</td>
+                </tr>
+                <tr>
+                    <td>改善フィードバック</td>
+                    <td>初稿への具体的改善点提示</td>
+                </tr>
+                <tr>
+                    <td>SNS拡散支援</td>
+                    <td>キャッチコピーやキャプション作成</td>
+                </tr>
+                <tr>
+                    <td>効果測定・分析</td>
+                    <td>視聴後の分析・改善提案</td>
+                </tr>
+            </table>
+            <p>こうすることで、企画・構成のクオリティ向上はもちろん、制作プロセス全体のスピードアップとクライアント満足度の向上を実現できます。</p>
+            <p>私ならこうした形でChatGPTをフル活用し、クライアントとの映像制作プロジェクトを進めますね✨</p>
+        </div>
+    </div>
+</body>
+</html>
